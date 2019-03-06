@@ -10,7 +10,7 @@ export class CounterComponent implements OnInit {
 
   constructor() { }
 
-  myVal:number = -2; 
+  myVal:number = -10; 
 
   ngOnInit() {
     const interv = interval(1000); 
