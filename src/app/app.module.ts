@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CondorComponent } from './condor/condor.component';
 import { FalconComponent } from './falcon/falcon.component';
-import { MessageService }  from './message.service';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { MessageService }  from './message.service';
   imports: [
     BrowserModule
   ],
-  providers: [MessageService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
