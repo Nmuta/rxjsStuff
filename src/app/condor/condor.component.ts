@@ -11,8 +11,6 @@ export class CondorComponent implements OnInit {
   constructor(private msg:MessageService) { }
   activeMessage:string = "not yet.."; 
 
-  
-
   ngOnInit() {
     this.msg.countEmitter.subscribe(val=>{
       this.activeMessage = val;

@@ -10,11 +10,6 @@ export class MessageService {
   count:number = 0 ; 
   public countEmitter = new EventEmitter<string>();
 
-  project(){
-    return `message service projecting ${this.count}`; 
-    
-  }
-
   sendNumber(){
     this.count++;
     this.countEmitter.emit(`new count is ${this.count}`); 

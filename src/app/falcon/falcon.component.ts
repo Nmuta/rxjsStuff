@@ -11,13 +11,11 @@ export class FalconComponent implements OnInit {
   constructor(private msg:MessageService) { }
 
   activeMessage:string = "not set yet"; 
-
-  msgCount:string = this.msg.project();
-  activeCount = this.msg.countEmitter.subscribe(val =>{
-    this.activeMessage = val; 
-  })
-
+  
   ngOnInit() {
+    this.msg.countEmitter.subscribe(val =>{
+      this.activeMessage = val; 
+    })
   }
 
   increment():void {
