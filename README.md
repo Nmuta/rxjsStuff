@@ -1,6 +1,6 @@
 # Services with Event Emitters 
 
-This repo is a simple example of two components that both subscribe to an event Emitter that is located within a service. 
+This repo contains examples of components that use rxjs and rxjs related features such as intervals, observables, and ngrx store features. 
 
 
 
