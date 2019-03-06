@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: BlackMelody;
+    src: url(assets/BlackMelody.otf);
+  }
+
+div {
+    display:block;
+    border: 2px solid purple;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    header{
+        font-size: 2.5em;
+        font-family: BlackMelody;
+    }
+}
+
+img.label{
+    width: 450px;
+    display:block;
+    clear:both;
+}
