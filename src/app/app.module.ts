@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CondorComponent } from './condor/condor.component';
 import { FalconComponent } from './falcon/falcon.component';
+import { CounterComponent } from './counter/counter.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CondorComponent,
-    FalconComponent
+    FalconComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule

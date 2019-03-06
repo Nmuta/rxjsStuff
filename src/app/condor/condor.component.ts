@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService} from '../message.service'; 
 
 @Component({
   selector: 'app-condor',
@@ -8,13 +7,11 @@ import { MessageService} from '../message.service';
 })
 export class CondorComponent implements OnInit {
 
-  constructor(private msg:MessageService) { }
+  constructor() { }
   activeMessage:string = "not yet.."; 
 
   ngOnInit() {
-    this.msg.countEmitter.subscribe(val=>{
-      this.activeMessage = val;
-    })
+ 
   }
 
 }

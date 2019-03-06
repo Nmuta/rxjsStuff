@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../message.service';
+
 
 @Component({
   selector: 'app-falcon',
@@ -8,18 +8,11 @@ import { MessageService } from '../message.service';
 })
 export class FalconComponent implements OnInit {
 
-  constructor(private msg:MessageService) { }
+  constructor() { }
 
   activeMessage:string = "not set yet"; 
   
   ngOnInit() {
-    this.msg.countEmitter.subscribe(val =>{
-      this.activeMessage = val; 
-    })
-  }
-
-  increment():void {
-    this.msg.sendNumber();
   }
 
 }
