@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CondorComponent } from './condor/condor.component';
 import { FalconComponent } from './falcon/falcon.component';
 import { CounterComponent } from './counter/counter.component';
+import { ObserveyComponent } from './observey/observey.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { CounterComponent } from './counter/counter.component';
     AppComponent,
     CondorComponent,
     FalconComponent,
-    CounterComponent
+    CounterComponent,
+    ObserveyComponent
   ],
   imports: [
     BrowserModule

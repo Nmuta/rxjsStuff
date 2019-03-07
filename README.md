@@ -5,3 +5,4 @@ This repo contains examples of components that use rxjs and rxjs related feature
 
 
 ![](demo.gif)
+![](demo2.gif)
