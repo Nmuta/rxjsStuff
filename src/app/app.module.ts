@@ -6,6 +6,7 @@ import { CondorComponent } from './condor/condor.component';
 import { FalconComponent } from './falcon/falcon.component';
 import { CounterComponent } from './counter/counter.component';
 import { ObserveyComponent } from './observey/observey.component';
+import { MergemapComponent } from './mergemap/mergemap.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ObserveyComponent } from './observey/observey.component';
     CondorComponent,
     FalconComponent,
     CounterComponent,
-    ObserveyComponent
+    ObserveyComponent,
+    MergemapComponent
   ],
   imports: [
     BrowserModule
