@@ -24,41 +24,30 @@ export class SwitchmapComponent implements OnInit {
 
     // OPEN UP TWO OBSERVABLES 
     const runningObservable$ = new Observable<number>(observer => {
-      setInterval(()=> {
-        console.log("running the 'runner'");
+      while(this.count<1000){
+        console.log('numbers running !');
         this.count++;
         observer.next(this.count);
-      },1000)
+      }
+      observer.complete();
     })
 
     const stateObservable$ = new Observable<string>(observer =>{
-      const intv = setInterval(()=> {
-        console.log("running the 'state'");
-        this.innerNumber++;
-        console.log("the inner number is ", this.innerNumber);
-        observer.next(this.states[this.count%this.states.length]);
-        if(this.count>10){
-          this.innerNumber = 0; 
-          observer.complete();
-        }
-      },50); 
+       while(this.states.length){
+         console.log('states running');
+         observer.next(this.states.pop());
+       }
+       observer.complete();
     })
 
     // Do a switchmap from the first observable to the other. 
    
-    const final = runningObservable$.pipe(switchMap((x) =>{
-     console.log("x is ", x);
-     
-     return stateObservable$
-    })); 
+    const final = runningObservable$.pipe(switchMap(() =>stateObservable$)); 
       
 
     
     // SUBSCRIBE TO THEM UNTIL THEY'RE DONE. 
-    final.subscribe(x=> {
-      console.log("subscribed");
-      this.output.push(`${x}`)
-    });
+    final.subscribe(x=> this.output.push(x));
 
 }
 
