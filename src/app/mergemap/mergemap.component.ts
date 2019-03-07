@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, interval } from 'rxjs';
-import { filter, map, reduce, mergeMap, switchAll, tap, withLatestFrom , take} from 'rxjs/operators';
+import { filter, map, reduce, mergeMap, switchAll, tap, withLatestFrom , take, takeUntil, switchMap} from 'rxjs/operators';
 import {from} from 'rxjs'; 
 
 @Component({
@@ -11,38 +11,59 @@ import {from} from 'rxjs';
 export class MergemapComponent implements OnInit {
 
   constructor() { }
-  output:number=-99;
+
+  output:string[]= ["no data yet"];  
   count:number = 0 ; 
-  estados:number[] = [44,55,66,77];
+  states:string[] = ["Arizona", "Colorado", "New Mexico", "New York", "California"];
+
+  /* MERGEMAP merges two observables into one . You control how the data is formatted in the new stream. 
+  then you can subscribe to that new stream */
 
   ngOnInit() {
 
-    const running = new Observable<number>(observer => {
-        setInterval(()=> {
-          this.count = this.count < this.estados.length-1 ? this.count+1 : 0 ; 
-          observer.next(this.count);
+    // OPEN UP TWO OBSERVABLES 
+    const runningObservable$ = new Observable<number>(observer => {
+        const intv = setInterval(()=> {
+          if(this.count < 7){
+            this.count++ 
+            observer.next(this.count);
+          } else {
+            observer.complete();
+            clearInterval(intv);
+          }
       },1000)
     })
 
-    const states = new Observable<number>(observer =>{
-      setInterval(()=> {
-        observer.next(this.estados[this.count]);
+    const stateObservable$ = new Observable<string>(observer =>{
+      const intv = setInterval(()=> {
+        if(this.count < 7){
+          observer.next(this.states[this.count%this.states.length]);
+        } else {
+          observer.complete();
+          clearInterval(intv);
+        }
       },1000); 
     })
 
-    const stuff$ = from([2,3,4,5]); 
-
-    const final = running.pipe(
-      mergeMap(x => states,
+    // DO A MERGE MAP ON THE TWO STREAMS .... (states and numbers )
+    // The incoming streams are async so the data doesn't always line up on a 1:1 basis
+    const final = runningObservable$.pipe(
+      mergeMap(x => stateObservable$,
       (z,y) => {
-        return z+y; 
+        return `${z} ${y}`; 
       })
       
     )
+
     
-    final.subscribe(x=> this.output = x)
+    // SUBSCRIBE TO THEM UNTIL THEY'RE DONE. 
+    final.subscribe(
+      x=> {
+        this.output.push(x)
+      }
+    )
 
-  }
 
+}
 
 }
