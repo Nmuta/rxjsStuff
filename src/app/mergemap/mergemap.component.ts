@@ -16,12 +16,12 @@ export class MergemapComponent implements OnInit {
   count:number = 0 ; 
   states:string[] = ["Arizona", "Colorado", "New Mexico", "New York", "California"];
 
-  /* MERGEMAP merges two observables into one . You control how the data is formatted in the new stream. 
+  /* MERGEMAP merges two observables into one. You control how the data is formatted in the new stream. 
   then you can subscribe to that new stream */
 
   ngOnInit() {
 
-    // OPEN UP TWO OBSERVABLES 
+    // first observable 
     const runningObservable$ = new Observable<number>(observer => {
         const intv = setInterval(()=> {
           if(this.count < 7){
@@ -34,6 +34,7 @@ export class MergemapComponent implements OnInit {
       },1000)
     })
 
+    // second observable 
     const stateObservable$ = new Observable<string>(observer =>{
       const intv = setInterval(()=> {
         if(this.count < 7){
@@ -52,7 +53,6 @@ export class MergemapComponent implements OnInit {
       (z,y) => {
         return `${z} ${y}`; 
       })
-      
     )
 
     

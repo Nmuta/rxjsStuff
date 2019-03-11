@@ -37,7 +37,7 @@ export class SwitchmapComponent implements OnInit {
     source.subscribe(x=> this.currentValue = userInput.value);
 
 
-    // 2ND OBSERVABLE IS AN INTERVAL BASED ON DATA FROM THE FIRST OBSERVABLE. 
+    // 2ND OBSERVABLE IS AN INTERVAL THAT RESTARTS WHEN THE FIRST INTERVAL FIRES AGAIN. 
     const stateObservable$ = new Observable<string[]>(observer =>{
          this.output = [];
          setInterval(()=>{
