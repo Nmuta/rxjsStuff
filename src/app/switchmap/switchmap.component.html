@@ -1,6 +1,5 @@
 <div class="box">
     <header>SwitchMap</header>
-    
     <input placeholder="enter USA state name" #userInput>
     <li *ngFor="let item of output">
       {{item}}
@@ -8,11 +7,10 @@
   </div>
 
  <div class="explanation">
+   <h3>switchMap could really be also called "restart"</h3>
     SwitchMap provides a very unique functionality that isn't really clearly outlined by the rxjs documentation. 
 
   There's an "outer" Observable and then an "inner" Observable. 
-
-  <br>
   The outer Observable kicks of the sequence. Then the inner Observable is called. 
   If the outer is called again, it restarts the inner Observable, effectively interrupting it. 
 
@@ -43,6 +41,7 @@
 
 </div>
 <img src="/assets/switchMap.gif" alt="" style="padding: 10px">
+<img src="/assets/switchMapScreen.gif" alt="" class="screenshot">
 
  
    

@@ -6,6 +6,8 @@ import { MergemapComponent } from './mergemap/mergemap.component';
 import { SwitchmapComponent } from './switchmap/switchmap.component';
 import { TimerComponent } from './timer/timer.component';
 import { ForkjoinComponent } from './forkjoin/forkjoin.component';
+import { OfComponent } from './of/of.component';
+import { MiscComponent } from './misc/misc.component';
 
 
 const routes: Routes = [
@@ -14,7 +16,9 @@ const routes: Routes = [
     {path: 'mergemap', component: MergemapComponent},
     {path: 'switchmap', component: SwitchmapComponent},
     {path: 'timer', component: TimerComponent},
-    {path: 'forkjoin', component: ForkjoinComponent}
+    {path: 'forkjoin', component: ForkjoinComponent},
+    {path: 'of', component: OfComponent},
+    {path: 'misc', component: MiscComponent}
 ];
 
 @NgModule({

@@ -12,7 +12,10 @@ import { SwitchmapComponent } from './switchmap/switchmap.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavComponent } from './nav/nav.component';
 import { TimerComponent } from './timer/timer.component';
-import { ForkjoinComponent } from './forkjoin/forkjoin.component'; 
+import { ForkjoinComponent } from './forkjoin/forkjoin.component';
+import { OfComponent } from './of/of.component';
+import { MiscComponent } from './misc/misc.component';
+import { CombineLatestComponent } from './combine-latest/combine-latest.component'; 
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { ForkjoinComponent } from './forkjoin/forkjoin.component';
     SwitchmapComponent,
     NavComponent,
     TimerComponent,
-    ForkjoinComponent
+    ForkjoinComponent,
+    OfComponent,
+    MiscComponent,
+    CombineLatestComponent
   ],
   imports: [
     BrowserModule,

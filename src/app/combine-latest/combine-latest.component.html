@@ -1,0 +1,15 @@
+<div class="box">
+  <div class="spanny">
+    <header>Combine Latest</header>
+    Similar to <span>forkJoin</span> , but keeps a lagging tally of 3 observables in progress
+    And starts merging data right away.  
+    <br>
+    <br>
+    <span>obs1:</span>{{value1}} <span>obs2:</span> {{value2}} <span>obs3:</span> {{value1}}
+    <br>
+    lagging tally: {{runningTally}}
+    <br>
+    <span class="small">Note: combineLatest will not emit an initial value until each observable emits at least one value.</span>
+  </div>
+</div>
+  

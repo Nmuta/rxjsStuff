@@ -58,9 +58,8 @@ export class MergemapComponent implements OnInit {
     
     // SUBSCRIBE TO THEM UNTIL THEY'RE DONE. 
     final.subscribe(
-      x=> {
-        this.output.push(x)
-      }
+      x=> this.output.push(x),
+      (error) => console.log("fail") 
     )
 
 
