@@ -19,9 +19,13 @@
   <p>
     The big question for me was : "what is the use case for a switch map ? "
     <br>
-    The main use case is when you NEED to interrupt an Observable from completing it's task. One example I heard 
-    was if you have an auto-complete function that's making database calls when a user starts typing.  Let's say that
-    the user started typing "app" and there is a stream of data coming in with all of the matches. The data coming in may include
+    The main use case is when you NEED to interrupt an Observable from completing it's task. 
+    
+    A classic example for this is the auto-complete methods when http calls are being made to match entries <i>while</i> a user types. 
+     
+    <br>
+    <br>
+     If a user starts typing "app", then there is a stream of data coming in with all of the matches. The data coming in may include
     'app', 'apple', 'applicaiton', 'appliance', etc. 
     <br>
     <br>

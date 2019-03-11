@@ -10,7 +10,9 @@ import { MergemapComponent } from './mergemap/mergemap.component';
 import { SwitchmapComponent } from './switchmap/switchmap.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { NavComponent } from './nav/nav.component'; 
+import { NavComponent } from './nav/nav.component';
+import { TimerComponent } from './timer/timer.component';
+import { ForkjoinComponent } from './forkjoin/forkjoin.component'; 
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { NavComponent } from './nav/nav.component';
     ObserveyComponent,
     MergemapComponent,
     SwitchmapComponent,
-    NavComponent
+    NavComponent,
+    TimerComponent,
+    ForkjoinComponent
   ],
   imports: [
     BrowserModule,
