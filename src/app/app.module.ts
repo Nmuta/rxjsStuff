@@ -9,6 +9,9 @@ import { ObserveyComponent } from './observey/observey.component';
 import { MergemapComponent } from './mergemap/mergemap.component';
 import { SwitchmapComponent } from './switchmap/switchmap.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { NavComponent } from './nav/nav.component'; 
+
 
 @NgModule({
   declarations: [
@@ -18,10 +21,12 @@ import { SwitchmapComponent } from './switchmap/switchmap.component';
     CounterComponent,
     ObserveyComponent,
     MergemapComponent,
-    SwitchmapComponent
+    SwitchmapComponent,
+    NavComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,14 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
 @font-face {
     font-family: BlackMelody;
     src: url(assets/BlackMelody.otf);
   }
 
-div {
+div.box {
     display:block;
     border: 2px solid purple;
     width: 200px;
@@ -24,4 +29,18 @@ img.label{
     width: 450px;
     display:block;
     clear:both;
+}
+
+title{
+    font-family: BlackMelody;
+    color: white;
+}
+
+div.explanation{
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+img.screenshot{
+    width: 70%;
 }

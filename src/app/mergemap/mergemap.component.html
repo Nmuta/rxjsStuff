@@ -1,6 +1,16 @@
-<div>
+<div class="box">
   <header>MergeMap</header>
   <li *ngFor="let item of output">
     {{item}}
   </li>
+</div>
+
+<div class="explanation">
+  MergeMap subscribes to two streams, creating a new stream.  You can then subsribe to that final stream. 
+
+  In this case, we're using one observable that produces numbers, and a second one that produces strings in the form of US states. 
+
+  We create a final stream that joins those two together. We subscribe to it and then push it into an array. 
+
+  We call observer.complete() on each of the Observables so that they end after a certain number of cycles. 
 </div>

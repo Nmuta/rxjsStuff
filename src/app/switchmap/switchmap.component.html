@@ -1,6 +1,34 @@
-<div>
+<div class="box">
     <header>SwitchMap</header>
+    
+    <input id="userInput" placeholder="USA state name">
     <li *ngFor="let item of output">
       {{item}}
     </li>
   </div>
+
+ <div class="explanation">
+    SwitchMap provides a very unique functionality that isn't really clearly outlined by the rxjs documentation. 
+
+  There's an "outer" Observable and then an "inner" Observable. 
+
+  <br>
+  The outer Observable kicks of the sequence. Then the inner Observable is called. 
+  If the outer is called again, it restarts the inner Observable, effectively interrupting it. 
+
+  <p>
+    The big question for me was : "what is the use case for a switch map ? "
+    <br>
+    The main use case is when you NEED to interrupt an Observable from completing it's task. One example I heard 
+    was if you have an auto-complete function that's making database calls when a user starts typing.  Let's say that
+    the user started typing "app" and there is a stream of data coming in with all of the matches. The data coming in may include
+    'app', 'apple', 'applicaiton', 'appliance', etc. 
+    <br>
+    <br>
+    If the user then erases "app" and then types something else, you need to "switch" out of the inner Observable calling that 
+    first set of data and then restart the inner observble to collect another set of words based on the new search term. 
+  </p>
+
+ </div>
+
+ <img src="/assets/switchMap.gif" alt="">

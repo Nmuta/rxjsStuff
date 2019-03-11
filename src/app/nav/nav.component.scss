@@ -1,0 +1,28 @@
+
+nav{
+    width: 100vw;
+    height: 50px;
+    font-size: 18px;    
+    background-color: black;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    div{
+        a{
+            margin: 0px 10px;
+            text-decoration: none;
+            color: white;
+            &:visited{
+                color: pink;
+            }
+        }
+    }
+    title{
+        color: white;
+    }
+    div.title{
+        color: white;
+        margin: 0px 20px;
+    }
+}
+
