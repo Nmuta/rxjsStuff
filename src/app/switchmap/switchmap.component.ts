@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Observable, interval, fromEvent } from 'rxjs';
 import { filter, map, reduce, mergeMap, switchAll, tap, withLatestFrom , take, takeUntil, switchMap} from 'rxjs/operators';
 
@@ -8,6 +8,8 @@ import { filter, map, reduce, mergeMap, switchAll, tap, withLatestFrom , take, t
   styleUrls: ['./switchmap.component.scss']
 })
 export class SwitchmapComponent implements OnInit {
+
+  @ViewChild('userInput') userInput:ElementRef; 
 
   constructor() { }
 
@@ -31,10 +33,10 @@ export class SwitchmapComponent implements OnInit {
 
 
     // 1ST OBSERVABLE IS A BUTTON CLICK 
-    let userInput:any = document.querySelector('#userInput'); 
-    const source = fromEvent(userInput, 'keyup');
+    //let userInput:any = document.querySelector('#userInput'); 
+    const source = fromEvent(this.userInput.nativeElement, 'keyup');
 
-    source.subscribe(x=> this.currentValue = userInput.value);
+    source.subscribe(x=> this.currentValue = this.userInput.nativeElement.value);
 
 
     // 2ND OBSERVABLE IS AN INTERVAL THAT RESTARTS WHEN THE FIRST INTERVAL FIRES AGAIN. 
@@ -47,7 +49,6 @@ export class SwitchmapComponent implements OnInit {
             }) || []
           )
          },1)
-     
     })
 
     // Do a switchmap from the first observable to the other. 
