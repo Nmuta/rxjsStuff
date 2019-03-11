@@ -1,3 +1,18 @@
-<p>
-  forkjoin works!
-</p>
+<div class="box">
+    <header>ForkJoin</header>
+    All three observables will resolve within about 6 seconds.
+    <ul>
+      <li *ngFor="let item of output">
+        {{item}}
+      </li>
+    </ul>
+     
+</div>
+  
+  <div class="explanation">
+     ForkJoin is like Promise.all()  .. it takes in a bunch of observables but then only outputs when all 3 of the observables have finished. 
+     ForkJoin returns an array of the <b>last</b> item received from each of the observables in the bundle. 
+  </div>
+  
+  <img src="/assets/forkJoin.gif" class="screenshot" alt="">
+  

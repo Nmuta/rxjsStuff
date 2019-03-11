@@ -5,6 +5,7 @@ import { ObserveyComponent } from './observey/observey.component';
 import { MergemapComponent } from './mergemap/mergemap.component';
 import { SwitchmapComponent } from './switchmap/switchmap.component';
 import { TimerComponent } from './timer/timer.component';
+import { ForkjoinComponent } from './forkjoin/forkjoin.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     {path: 'mergemap', component: MergemapComponent},
     {path: 'switchmap', component: SwitchmapComponent},
     {path: 'timer', component: TimerComponent},
+    {path: 'forkjoin', component: ForkjoinComponent}
 ];
 
 @NgModule({
