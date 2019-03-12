@@ -25,9 +25,9 @@ export class SwitchmapComponent implements OnInit {
 
   ngOnInit() {
     // 1ST OBSERVABLE IS A KEY UP EVENT 
-    const source = fromEvent(this.userInput.nativeElement, 'keyup');
+    const source$ = fromEvent(this.userInput.nativeElement, 'keyup');
 
-    source.subscribe(x=> this.currentValue = this.userInput.nativeElement.value);
+    source$.subscribe(x=> this.currentValue = this.userInput.nativeElement.value);
 
     // 2ND OBSERVABLE IS AN INTERVAL THAT RESTARTS WHEN THE FIRST INTERVAL FIRES AGAIN. 
     const stateObservable$ = new Observable<string[]>(observer =>{
@@ -42,7 +42,7 @@ export class SwitchmapComponent implements OnInit {
     })
     // Do a switchmap from the first observable to the other. 
    
-    const final= source.pipe(switchMap(() =>stateObservable$)); 
+    const final= source$.pipe(switchMap(() =>stateObservable$)); 
     //const final= source.pipe(switchMap(() =>stateObservable$, (x:string,y)=> y.concat([x])  )); // can possibly return data from outer obs.
       
     // SUBSCRIBE  
