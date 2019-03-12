@@ -43,6 +43,7 @@ export class SwitchmapComponent implements OnInit {
     // Do a switchmap from the first observable to the other. 
    
     const final= source.pipe(switchMap(() =>stateObservable$)); 
+    //const final= source.pipe(switchMap(() =>stateObservable$, (x:string,y)=> y.concat([x])  )); // can possibly return data from outer obs.
       
     // SUBSCRIBE  
     final.subscribe(x=> this.output = x);
