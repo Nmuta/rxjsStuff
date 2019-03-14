@@ -5,6 +5,23 @@ This repo contains examples of components that use rxjs and rxjs related feature
 
 ![](/src/assets/switchMap.gif)
 
+# install instructions
+
+
+you must already have the angular cli installed. If not, do 
+> npm install -g @angular/cli
+
+
+cd into project folder
+do 
+> ng serve
+nagivate to http://localhost:4200
+
+view the live examples. 
+
+
+# postscript
+
 
 After building these for a couple of days, I found two other resources that do a far better job of helping to conceptualize these topics, so I won't be investing any more time in building these out. 
 
