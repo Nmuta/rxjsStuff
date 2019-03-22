@@ -27,7 +27,7 @@ After building these for a couple of days, I found two other resources that do a
 
 These resources are: 
 
-1. https://www.learnrxjs.io/operators/filtering/take.html 
+1. https://www.learnrxjs.io/operators/
 
 > very good resource with jsFiddle examples that you can tweak on your own 
 
