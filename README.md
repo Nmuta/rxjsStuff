@@ -3,9 +3,10 @@
 This repo contains examples of components that use rxjs and rxjs related features such as intervals, observables, and ngrx store features. 
 
 
-![](mainScreenShot.png)
 
 ![](/src/assets/switchMap.gif)
+
+![](mainScreenShot.png)
 
 # install instructions
 
