@@ -14,10 +14,13 @@ This repo contains examples of components that use rxjs and rxjs related feature
 you must already have the angular cli installed. If not, do 
 > npm install -g @angular/cli
 
+node version used for this repo is 8.9.4 in order to match most frequently used node version of co-workers at Spectrum in early 2019. May need to be upgraded soon! 
 
 cd into project folder
 do 
 > ng serve
+
+
 nagivate to http://localhost:4200
 
 view the live examples. 
