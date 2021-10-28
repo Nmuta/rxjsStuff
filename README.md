@@ -32,7 +32,7 @@ view the live examples.
 There are also other resources that can help you further conceptualize these topics. 
 These resources are: 
 
-1. https://www.learnrxjs.io/operators/
+1.https://www.learnrxjs.io/learn-rxjs/operators
 
 > very good resource with jsFiddle examples that you can tweak on your own 
 
