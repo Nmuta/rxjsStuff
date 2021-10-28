@@ -29,8 +29,7 @@ view the live examples.
 # postscript
 
 
-After building these for a couple of days, I found two other resources that do a far better job of helping to conceptualize these topics, so I won't be investing any more time in building these out. 
-
+There are also other resources that can help you further conceptualize these topics. 
 These resources are: 
 
 1. https://www.learnrxjs.io/operators/
